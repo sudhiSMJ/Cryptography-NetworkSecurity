@@ -1,0 +1,79 @@
+Chinese Remainder Theorem
+
+"There always exists an "X" that satisfies the given congruence
+x = rem[0] mod num[0]
+x = rem[1] mod num[1]
+x = rem[2] mod num[2]
+	.....
+
+	all members should be "co-prime" to each other.
+	co-prime  gcd (num [i]) = 1
+
+
+	
+Eg: x = 1 mod 5
+	x = 3 mod 7
+	
+	x= 31
+
+	5*1=5 	6
+	11 mod 7 = 4 
+	16 mod 5 = 1 but 16 mod 7 != 3
+	21 mod 5 = 1 but 21 mod 7 = 0
+	26 mod 5 = 1 but 26 mod 7 = 5
+	31 mod 5 = 1  31 mod 7 = 3
+
+
+if 						x= 36
+x = a1 mod m1		x = 1 mod 5			a1 = 1 	m1 = 5
+x = a2 mod m2		x = 1 mod 7			a2 = 1	m2 = 7
+x = a3 mod m3		x = 3 mod 11		a3 = 3	m3 = 11
+
+if this conditon satisfies gcd (m1, m2, m3) = 1 i.e, m1, m2 and m3 are co prime to each other, 
+then
+x = (M1X1a1 + M2X2a2 + ...... MnXnan) mod M
+
+M = m1 * m2 * m3			M = 5	*	7	*	11 = 385			
+Mi = M/ mi					M1 = 7*11 = 77
+							M2 = 5*11 = 55
+M1 = m1 * m2 * m3/ m1		M3 = 5*7 = 35	
+	= m2 * m3
+
+M2 = m1 * m3
+M3 = m1 * m2
+
+MiXi = 1 mod mi 
+
+
+M1X1 = 1 mod m1
+77 * X1 = 1 mod 5				
+77 mod 5 * X1 mod 5 = 1
+2 * X1 mod 5 = 1
+2 * X1 = 1 mod 5
+x1 = 3
+
+55 * X2 = 1 mod 7
+x2 = 6
+
+x3 = 6
+
+x =( 77*3*1 + 55*6*1 + 35*6*3 ) mod 385
+	= 231 + 330 + 630 mod 385
+	= 36
+
+Multiplicative modulo inverse of mi
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
